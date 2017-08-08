@@ -1,4 +1,5 @@
 import React from 'react';
+import { PropTypes } from 'prop-types';
 import { formatPrice } from '../helpers';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -50,7 +51,7 @@ class Order extends React.Component{
     return(
       <div className="order-wrap">
         <h2>Your Order</h2>
-        <CSSTransitionGroup 
+        <CSSTransitionGroup
         className="order"
         component="ul"
         transitionName="order"
@@ -69,9 +70,9 @@ class Order extends React.Component{
 }
 
 Order.propTypes = {
-  fishes: React.PropTypes.object.isRequired,
-  order: React.PropTypes.object.isRequired,
-  removeFromOrder: React.PropTypes.func.isRequired
+  fishes: PropTypes.object.isRequired,
+  order: PropTypes.object.isRequired,
+  removeFromOrder: PropTypes.func.isRequired
 }
 
 export default Order;
